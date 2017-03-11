@@ -86,8 +86,8 @@ public class DeviceResponse {
         response.setName(device.getName());
         response.setUniqueid(device.getUniqueid());
         response.setManufacturername("Philips");
-        response.setType("Dimmable light");
-        response.setModelid("LWB004");
+        response.setType("Extended color light");
+        response.setModelid("LCT001");
         response.setSwversion("66012040");
         response.setLuminaireuniqueid(null);
 
