@@ -1020,6 +1020,11 @@ public class HueMulator implements HueErrorStringSet {
 									body = replaceIntensityValue(device.getContentBody(), calculateIntensity(state, theStateChanges, stateHasBri, stateHasBriInc), false);
 								else
 									body = replaceIntensityValue(device.getContentBodyOff(), calculateIntensity(state, theStateChanges, stateHasBri, stateHasBriInc), false);
+
+								if (body == null || body.isEmpty()) {
+									body = request.body();
+								}
+
 								// make call
 								if (doHttpRequest(anUrl, device.getHttpVerb(), device.getContentType(), body, theHeaders) == null) {
 									log.warn("Error on calling url to change device state: " + anUrl);
